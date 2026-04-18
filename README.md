@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moss Weather
 
-## Getting Started
+Live værmelding for Moss basert på [MET Norway](https://api.met.no) sitt åpne API.
 
-First, run the development server:
+## Tech stack
+
+- **Next.js 16** — App Router, Turbopack
+- **TypeScript**
+- **Tailwind CSS v4**
+- **shadcn/ui** — base-nova preset (bygget på base-ui)
+- **next-intl** — i18n for norsk og engelsk
+- **next-themes** — dark / light / system
+
+## Funksjoner
+
+- Nå-været med dynamisk gradient (reflekterer vær og tid på døgnet)
+- Timeprognose for neste 24 timer (horisontal scroll)
+- 7-dagers prognose med temperatur-range
+- Dark / light mode (husker valg)
+- Norsk + engelsk (`/nb`, `/en`)
+- Responsiv (mobil + desktop)
+
+## Utvikling
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Åpne [http://localhost:3000](http://localhost:3000) — omdirigeres til `/nb`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Bygg
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Lint og typecheck
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+npx tsc --noEmit
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Datakilde
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Værdata er levert av [Meteorologisk institutt](https://api.met.no). Bruken følger deres [Terms of Service](https://api.met.no/doc/TermsOfService) — siden identifiserer seg med en `User-Agent` og cacher responsen i 10 minutter.
 
-## Deploy on Vercel
+## Struktur
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/[locale]/      # Lokaliserte sider (nb, en)
+components/        # UI-komponenter (hero, forecast, details)
+components/ui/     # shadcn/ui
+lib/weather/       # MET-klient, transform, typer
+i18n/messages/     # Oversettelser
+public/            # Hero-bilde (Gemini-generert), værikoner (MET)
+proxy.ts           # next-intl locale-routing (Next.js 16 proxy convention)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Koordinater
+
+Moss: `59.4369°N, 10.6596°E` (altitude 20m)
+
+## Lisens
+
+Vær-ikonene i `public/weather-icons/` er fra [metno/weathericons](https://github.com/metno/weathericons) (MIT). Værdata fra MET Norway — fri bruk under CC-BY 4.0.

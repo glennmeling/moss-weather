@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Været i Moss",
+    "description": "Live værmelding for Moss fra Meteorologisk institutt"
+  },
+  "hero": {
+    "city": "Moss",
+    "updatedAt": "Oppdatert {time}"
+  },
+  "sections": {
+    "now": "Nå",
+    "hourly": "Time for time",
+    "daily": "7 dager fremover",
+    "details": "Detaljer"
+  },
+  "labels": {
+    "feelsLike": "Føles som",
+    "wind": "Vind",
+    "humidity": "Luftfuktighet",
+    "pressure": "Lufttrykk",
+    "sunrise": "Soloppgang",
+    "sunset": "Solnedgang",
+    "precipitation": "Nedbør",
+    "precipitationNext1h": "Nedbør neste time",
+    "precipitationNext24h": "Nedbør neste 24t",
+    "source": "Kilde",
+    "nowDescription": "{weather} i {city}",
+    "high": "Høy",
+    "low": "Lav"
+  },
+  "units": {
+    "mps": "m/s",
+    "hpa": "hPa",
+    "mm": "mm",
+    "percent": "%"
+  },
+  "directions": {
+    "N": "N",
+    "NNE": "NNØ",
+    "NE": "NØ",
+    "ENE": "ØNØ",
+    "E": "Ø",
+    "ESE": "ØSØ",
+    "SE": "SØ",
+    "SSE": "SSØ",
+    "S": "S",
+    "SSW": "SSV",
+    "SW": "SV",
+    "WSW": "VSV",
+    "W": "V",
+    "WNW": "VNV",
+    "NW": "NV",
+    "NNW": "NNV"
+  },
+  "theme": {
+    "toggle": "Bytt tema",
+    "light": "Lys",
+    "dark": "Mørk",
+    "system": "System"
+  },
+  "language": {
+    "toggle": "Bytt språk"
+  },
+  "weather": {
+    "clearsky": "Klarvær",
+    "fair": "Lettskyet",
+    "partlycloudy": "Delvis skyet",
+    "cloudy": "Skyet",
+    "fog": "Tåke",
+    "lightrain": "Lett regn",
+    "rain": "Regn",
+    "heavyrain": "Kraftig regn",
+    "lightrainshowers": "Lette regnbyger",
+    "rainshowers": "Regnbyger",
+    "heavyrainshowers": "Kraftige regnbyger",
+    "lightsleet": "Lett sludd",
+    "sleet": "Sludd",
+    "heavysleet": "Kraftig sludd",
+    "lightsleetshowers": "Lette sluddbyger",
+    "sleetshowers": "Sluddbyger",
+    "heavysleetshowers": "Kraftige sluddbyger",
+    "lightsnow": "Lett snø",
+    "snow": "Snø",
+    "heavysnow": "Kraftig snø",
+    "lightsnowshowers": "Lette snøbyger",
+    "snowshowers": "Snøbyger",
+    "heavysnowshowers": "Kraftige snøbyger",
+    "lightrainandthunder": "Lett regn og torden",
+    "rainandthunder": "Regn og torden",
+    "heavyrainandthunder": "Kraftig regn og torden",
+    "lightsleetandthunder": "Lett sludd og torden",
+    "sleetandthunder": "Sludd og torden",
+    "heavysleetandthunder": "Kraftig sludd og torden",
+    "lightsnowandthunder": "Lett snø og torden",
+    "snowandthunder": "Snø og torden",
+    "heavysnowandthunder": "Kraftig snø og torden",
+    "lightrainshowersandthunder": "Lette regnbyger og torden",
+    "rainshowersandthunder": "Regnbyger og torden",
+    "heavyrainshowersandthunder": "Kraftige regnbyger og torden",
+    "lightsleetshowersandthunder": "Lette sluddbyger og torden",
+    "sleetshowersandthunder": "Sluddbyger og torden",
+    "heavysleetshowersandthunder": "Kraftige sluddbyger og torden",
+    "lightsnowshowersandthunder": "Lette snøbyger og torden",
+    "snowshowersandthunder": "Snøbyger og torden",
+    "heavysnowshowersandthunder": "Kraftige snøbyger og torden"
+  }
+}
